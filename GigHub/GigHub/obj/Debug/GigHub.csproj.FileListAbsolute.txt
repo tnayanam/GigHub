@@ -58,3 +58,4 @@ c:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.csproj.GenerateResource.Cache
 C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.GigandGenreModeladded.resources
 C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.OverrideConvention.resources
 C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.SeedDataForGenre.resources
+C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.fkprop.resources
