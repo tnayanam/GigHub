@@ -168,9 +168,24 @@
     <Compile Include="Migrations\201612310208387_Initial Model.Designer.cs">
       <DependentUpon>201612310208387_Initial Model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612310253093_GigandGenreModeladded.cs" />
+    <Compile Include="Migrations\201612310253093_GigandGenreModeladded.Designer.cs">
+      <DependentUpon>201612310253093_GigandGenreModeladded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612310314491_OverrideConvention.cs" />
+    <Compile Include="Migrations\201612310314491_OverrideConvention.Designer.cs">
+      <DependentUpon>201612310314491_OverrideConvention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612310323313_SeedDataForGenre.cs" />
+    <Compile Include="Migrations\201612310323313_SeedDataForGenre.Designer.cs">
+      <DependentUpon>201612310323313_SeedDataForGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Gig.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -245,6 +260,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201612310208387_Initial Model.resx">
       <DependentUpon>201612310208387_Initial Model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612310253093_GigandGenreModeladded.resx">
+      <DependentUpon>201612310253093_GigandGenreModeladded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612310314491_OverrideConvention.resx">
+      <DependentUpon>201612310314491_OverrideConvention.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612310323313_SeedDataForGenre.resx">
+      <DependentUpon>201612310323313_SeedDataForGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
