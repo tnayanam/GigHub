@@ -60,3 +60,4 @@ C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.OverrideConvention.r
 C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.SeedDataForGenre.resources
 C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.fkprop.resources
 C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.addnametoapp.resources
+C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.addattendance.resources
