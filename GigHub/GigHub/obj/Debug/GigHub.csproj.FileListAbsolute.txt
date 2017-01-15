@@ -59,3 +59,4 @@ C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.GigandGenreModeladde
 C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.OverrideConvention.resources
 C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.SeedDataForGenre.resources
 C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.fkprop.resources
+C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.addnametoapp.resources
