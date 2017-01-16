@@ -61,3 +61,9 @@ C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.SeedDataForGenre.res
 C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.fkprop.resources
 C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.addnametoapp.resources
 C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.addattendance.resources
+C:\Project\GigHub\GigHub\GigHub\bin\System.Net.Http.Formatting.dll
+C:\Project\GigHub\GigHub\GigHub\bin\System.Web.Http.dll
+C:\Project\GigHub\GigHub\GigHub\bin\System.Web.Http.WebHost.dll
+C:\Project\GigHub\GigHub\GigHub\bin\System.Net.Http.Formatting.xml
+C:\Project\GigHub\GigHub\GigHub\bin\System.Web.Http.xml
+C:\Project\GigHub\GigHub\GigHub\bin\System.Web.Http.WebHost.xml
