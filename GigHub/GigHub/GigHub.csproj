@@ -173,6 +173,13 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
+    <Compile Include="Controllers\FollowingsController.cs" />
+    <Compile Include="Dtos\FollowingDto.cs" />
+    <Compile Include="Migrations\201701250225461_hello.cs" />
+    <Compile Include="Migrations\201701250225461_hello.Designer.cs">
+      <DependentUpon>201701250225461_hello.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Following.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -220,6 +227,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\FutureDate.cs" />
     <Compile Include="ViewModels\GigFormViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\RegisterViewModel.cs" />
     <Compile Include="ViewModels\ValidTime.cs" />
   </ItemGroup>
@@ -312,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701152122561_addattendance.resx">
       <DependentUpon>201701152122561_addattendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701250225461_hello.resx">
+      <DependentUpon>201701250225461_hello.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
