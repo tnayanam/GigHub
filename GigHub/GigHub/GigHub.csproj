@@ -180,6 +180,10 @@
     <Compile Include="Migrations\201701250225461_hello.Designer.cs">
       <DependentUpon>201701250225461_hello.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703200232302_de.cs" />
+    <Compile Include="Migrations\201703200232302_de.Designer.cs">
+      <DependentUpon>201703200232302_de.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Following.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -290,6 +294,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Gigs\Create.cshtml" />
     <Content Include="Views\Followees\Index.cshtml" />
+    <Content Include="Views\Gigs\Mine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -325,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701250225461_hello.resx">
       <DependentUpon>201701250225461_hello.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703200232302_de.resx">
+      <DependentUpon>201703200232302_de.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

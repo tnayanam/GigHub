@@ -68,3 +68,4 @@ C:\Project\GigHub\GigHub\GigHub\bin\System.Net.Http.Formatting.xml
 C:\Project\GigHub\GigHub\GigHub\bin\System.Web.Http.xml
 C:\Project\GigHub\GigHub\GigHub\bin\System.Web.Http.WebHost.xml
 C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.hello.resources
+c:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.de.resources
