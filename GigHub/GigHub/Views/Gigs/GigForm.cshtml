@@ -4,12 +4,23 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@*From same form we need to open during creation and then during edit 
+    obviously same form should open but now when we click on save it sould 
+    update as it not the new record
+    Its important concept keep in mind.*@
+
+@*Using same form for new and update*@
+
 <h2>@Model.Heading</h2>
 
-@using(Html.BeginForm("Create", "Gigs"))
+@*@using(Html.BeginForm("Create", "Gigs"))
+{*@
+@using (Html.BeginForm(Model.Action, "Gigs"))
 {
     <p class="alert alert-info">All fields are <strong>required</strong>.</p>
     @Html.AntiForgeryToken()
+    // sending id field so that update and creating new record can be differentiated 
+    @Html.HiddenFor(m=>m.Id)
     <div class="form-group">
         @Html.LabelFor(m => m.Venue)
         @Html.TextBoxFor(m => m.Venue, new { @class = "form-control", autofocus = "autofocus" })
