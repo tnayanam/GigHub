@@ -34,16 +34,17 @@ namespace GigHub.Models
             return userIdentity;
         }
 
+        // we should not be able to create a usernotifcation object without a user and notification object .
+
         public void Notify(Notification notification)
         {
-            var userNotification = new UserNotification
-            {
-                User = this,
-                Notification = notification
-            };
+            var userNotification = new UserNotification(this, notification);
             UserNotifications.Add(userNotification);
         }
     }
 
   
 }
+
+//when we know that a class always needs certain stuff or other class object we need to put it in the constructor that
+    //way we can never create emoty object of that class
