@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using GigHub.Models;
-using System;
+﻿using GigHub.Models;
 using Microsoft.AspNet.Identity;
+using System.Linq;
+using System.Web.Http;
 namespace GigHub.Controllers.Api
 {
     [Authorize]
@@ -24,6 +19,10 @@ namespace GigHub.Controllers.Api
         {
             var userId = User.Identity.GetUserId();
             var gig = _context.Gigs.Single(g => g.Id == id && g.ArtistId == userId);
+            //just in case if user cancel gigs two times
+            if (gig.IsCanceled)
+                return NotFound();
+
                 gig.IsCanceled = true;
             _context.SaveChanges();
 
