@@ -189,6 +189,10 @@
     <Compile Include="Migrations\201703240153350_de1.Designer.cs">
       <DependentUpon>201703240153350_de1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703252105561_AddClass.cs" />
+    <Compile Include="Migrations\201703252105561_AddClass.Designer.cs">
+      <DependentUpon>201703252105561_AddClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Following.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -233,6 +237,9 @@
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\NotificationType.cs" />
+    <Compile Include="Models\UserNotification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\FutureDate.cs" />
@@ -342,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703240153350_de1.resx">
       <DependentUpon>201703240153350_de1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703252105561_AddClass.resx">
+      <DependentUpon>201703252105561_AddClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
