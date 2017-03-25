@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web.Http;
 
 
+// controllers should not have logic as it wil be difficult to unit test. move it to models 
+
 namespace GigHub.Controllers.Api
 {
     [Authorize]
