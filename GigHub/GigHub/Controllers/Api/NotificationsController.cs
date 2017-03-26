@@ -19,34 +19,18 @@ namespace GigHub.Controllers.Api
         }
         public IEnumerable<NotificationDto> GetNewMotifications()
         {
-            var t = 2326;
             var userId = User.Identity.GetUserId();
             var notifications = _context.UserNotifications
-                .Where(un => un.UserId == userId)
+                .Where(un => un.UserId == userId && !un.isRead)
                 .Select(un => un.Notification)
                 .Include(n => n.Gig.Artist)
                 .ToList();
+            AutoMapper.Mapper.CreateMap<ApplicationUser, UserDto>();
+            AutoMapper.Mapper.CreateMap<Gig, GigDto>();
+            AutoMapper.Mapper.CreateMap<Notification, NotificationDto>();
 
-            return notifications.Select(n=> new NotificationDto()
-            {
-                DateTime = n.DateTime,
-                Gig = new GigDto
-                {
-                    Artist = new UserDto
-                    {
-                        Id = n.Gig.Artist.Id,
-                        Name = n.Gig.Artist.Name
-                    },
-                    DateTime = n.Gig.DateTime,
-                    Id = n.Gig.Id,
-                    IsCanceled = n.Gig.IsCanceled,
-                    Venue  = n.Gig.Venue
-                },
-                OriginalVenue = n.OriginalVenue,
-                OrigninalDateTime = n.OrigninalDateTime,
-                Type = n.Type
-                
-            });
+            return notifications.Select(AutoMapper.Mapper.Map<Notification, NotificationDto>);
+          
         }
     }
 }
