@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using GigHub.Dtos;
 using GigHub.Models;
-using System.ComponentModel;
-using System.Data.Entity;
 using Microsoft.AspNet.Identity;
-using GigHub.Dtos;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Web.Http;
 
 namespace GigHub.Controllers.Api
 {
