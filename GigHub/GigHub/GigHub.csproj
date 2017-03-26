@@ -178,6 +178,10 @@
     <Compile Include="Controllers\FolloweesController.cs" />
     <Compile Include="Controllers\Api\FollowingsController.cs" />
     <Compile Include="Dtos\FollowingDto.cs" />
+    <Compile Include="Dtos\GenreDto.cs" />
+    <Compile Include="Dtos\GigDto.cs" />
+    <Compile Include="Dtos\NotificationDto.cs" />
+    <Compile Include="Dtos\UserDto.cs" />
     <Compile Include="Migrations\201701250225461_hello.cs" />
     <Compile Include="Migrations\201701250225461_hello.Designer.cs">
       <DependentUpon>201701250225461_hello.cs</DependentUpon>
