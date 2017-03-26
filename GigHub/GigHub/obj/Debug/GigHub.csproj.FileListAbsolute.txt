@@ -71,3 +71,5 @@ C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.hello.resources
 c:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.de.resources
 C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.de1.resources
 C:\Project\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddClass.resources
+C:\Project\GigHub\GigHub\GigHub\bin\AutoMapper.dll
+C:\Project\GigHub\GigHub\GigHub\bin\AutoMapper.xml

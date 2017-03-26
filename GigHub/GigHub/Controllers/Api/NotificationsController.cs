@@ -19,6 +19,7 @@ namespace GigHub.Controllers.Api
         }
         public IEnumerable<NotificationDto> GetNewMotifications()
         {
+            var t = 2;
             var userId = User.Identity.GetUserId();
             var notifications = _context.UserNotifications
                 .Where(un => un.UserId == userId)
@@ -44,6 +45,7 @@ namespace GigHub.Controllers.Api
                 OriginalVenue = n.OriginalVenue,
                 OrigninalDateTime = n.OrigninalDateTime,
                 Type = n.Type
+                
             });
         }
     }
