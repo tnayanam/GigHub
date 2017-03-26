@@ -161,3 +161,14 @@ h6,
     .voffset1{margin-top: 5px;}
     .voffset2{margin-top: 10px;}
     .voffset3{margin-top: 20px;}
+
+    .navbar-inverse .notifications{
+        position: relative;
+    }
+
+   .navbar-inverse .notifications .badge{
+          position: absolute;
+    top: 8px;
+    right: -1px;
+    background: #a80a0a;
+    }
