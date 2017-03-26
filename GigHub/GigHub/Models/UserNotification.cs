@@ -27,12 +27,12 @@ namespace GigHub.Models
         }
         [Key]
         [Column(Order = 1)]
-        public string UserId { get; set; }
+        public string UserId { get; private set; }
         
 
         [Key]
         [Column(Order = 2)]
-        public int NotificationId { get; set; }
+        public int NotificationId { get; private set; }
 
         // I should not be able to change the value of "user" and "notification" 
         // once they are set int he constructor

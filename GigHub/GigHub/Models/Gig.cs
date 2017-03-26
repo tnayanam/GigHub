@@ -1,17 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using GigHub.ViewModels;
 
 namespace GigHub.Models
 {
     public class Gig
     {
+        public Gig()
+        {
+            Attendances = new Collection<Attendance>();
+        }
+
         public int Id { get; set; }
 
         public ApplicationUser Artist { get; set; }
 
         public DateTime DateTime { get; set; }
 
-        public bool IsCanceled { get; set; }
+        public bool IsCanceled { get; private set; }
+        //public bool IsUpdated { get; private set; }
 
         [Required]
         [StringLength(255)]
@@ -24,5 +34,32 @@ namespace GigHub.Models
 
         [Required]
         public byte GenreId { get; set; }
+
+        public ICollection<Attendance> Attendances { get; private set; }
+
+        public void Cancel()
+        {
+            IsCanceled = true;
+            var notification = new Notification(this, NotificationType.GigCanceled);
+            foreach (var attendee in Attendances.Select(a => a.Attendee))
+                attendee.Notify(notification);
+        }
+
+        public void Modify(DateTime dateTime, byte genre, string venue)
+        {
+            // setting old values
+            var notification = new Notification(this, NotificationType.GigUpdated);
+            notification.OriginalVenue = Venue;
+            notification.OrigninalDateTime = dateTime;
+            // updating to new values
+            Venue = venue;
+            DateTime = dateTime;
+            GenreId = genre;
+            foreach (var attendee in Attendances.Select(a=>a.Attendee))
+            {
+                attendee.Notify(notification);
+            }
+
+        }
     }
 }

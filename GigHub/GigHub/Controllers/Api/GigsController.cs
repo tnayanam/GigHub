@@ -1,8 +1,9 @@
 ﻿using GigHub.Models;
 using Microsoft.AspNet.Identity;
-using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Http;
+
 namespace GigHub.Controllers.Api
 {
     [Authorize]
@@ -15,33 +16,26 @@ namespace GigHub.Controllers.Api
             _context = new ApplicationDbContext();        
 	    }
 
+
+        /// <summary>
+        ///  its more like when gig is deleted
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete]
         public IHttpActionResult Cancel(int id)
         {
             var userId = User.Identity.GetUserId();
-            var gig = _context.Gigs.Single(g => g.Id == id && g.ArtistId == userId);
+            var gig = _context.Gigs
+                .Include(g=>g.Attendances.Select(a=>a.Attendee))
+                .Single(g => g.Id == id && g.ArtistId == userId);
+
             //just in case if user cancel gigs two times
             if (gig.IsCanceled)
                 return NotFound();
 
-                gig.IsCanceled = true;
-
-                var notification = new Notification
-                {
-                    DateTime = DateTime.Now,
-                    Gig = gig,
-                    Type = NotificationType.GigCanceled
-                };
-                var attendees = _context.Attendances.Where(a => a.GigId == gig.Id)
-                    .Select(a => a.Attendee)
-                    .ToList();
-
-            foreach (var attendee in attendees)
-            {
-                attendee.Notify(notification);
-              
-            }
-
+            gig.Cancel();
+        
             _context.SaveChanges();
 
             return Ok();

@@ -38,8 +38,9 @@ namespace GigHub.Models
 
         public void Notify(Notification notification)
         {
-            var userNotification = new UserNotification(this, notification);
-            UserNotifications.Add(userNotification);
+            // we are passing user and notification so that the usenotifcaiton object can be
+            // created and can be added to usernotificaitons collection
+            UserNotifications.Add(new UserNotification(this, notification));
         }
     }
 
